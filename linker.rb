@@ -1,7 +1,7 @@
 
 require 'colorize'
 
-if ! ARGV[1] or ! ARGV[2]
+if ! ARGV[0] or ! ARGV[1]
 
 	puts "Usage"
 	puts "ruby #{$0} <hashes file> <cracked file>"
@@ -11,7 +11,7 @@ else
 
 	hashed = {}
 
-	infile = ARGV[1]
+	infile = ARGV[0]
 
 	File.open(infile,'r') {|file|
 		file.each do |l|
@@ -33,7 +33,7 @@ else
 
 	cracked = {}
 
-	infile = ARGV[2]
+	infile = ARGV[1]
 
 	File.open(infile, 'r') {|file|
 		file.each do |l| 
